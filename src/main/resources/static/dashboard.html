@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard · TeamForge</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <!-- ============== SIDEBAR ============== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo-mark">TF</div>
+      <div class="brand-name">TeamForge<span>Team Intelligence</span></div>
+    </div>
+
+    <nav class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <a href="dashboard.html" class="nav-link active"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+      <a href="students.html" class="nav-link"><i class="bi bi-people"></i> Students</a>
+      <a href="skills.html" class="nav-link"><i class="bi bi-lightning-charge"></i> Skills</a>
+      <a href="projects.html" class="nav-link"><i class="bi bi-kanban"></i> Projects</a>
+      <a href="#" class="nav-link"><i class="bi bi-diagram-3"></i> Teams <span class="badge-count">6</span></a>
+
+      <div class="nav-label">Insights</div>
+      <a href="faculty.html" class="nav-link"><i class="bi bi-easel"></i> Faculty View</a>
+      <a href="#" class="nav-link"><i class="bi bi-bar-chart"></i> Reports</a>
+
+      <div class="nav-label">Account</div>
+      <a href="profile.html" class="nav-link"><i class="bi bi-person-circle"></i> Profile</a>
+      <a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+      <a href="index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </nav>
+
+    <div class="user-mini">
+      <div class="av">KN</div>
+      <div class="who">Karumuhilarasu K.N.<small>Admin</small></div>
+    </div>
+  </aside>
+
+  <!-- ============== MAIN ============== -->
+  <div class="main">
+
+    <!-- Topbar -->
+    <header class="topbar">
+      <button class="hamburger" id="hamburgerBtn"><i class="bi bi-list"></i></button>
+      <div class="page-heading">Dashboard <small>Here's what's happening across your teams today</small></div>
+
+      <div class="topbar-search">
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="Search students, projects, skills...">
+      </div>
+
+      <div class="topbar-actions">
+        <button class="icon-btn" id="darkModeToggle" title="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+        <button class="icon-btn"><i class="bi bi-bell"></i><span class="dot"></span></button>
+        <div class="topbar-profile">
+          <div class="av">KN</div>
+          <div class="who"><b>Karumuhilarasu</b><span>Admin</span></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- KPI cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#2563EB,#06B6D4); --kpi-tint:rgba(37,99,235,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-people-fill"></i></div><span class="kpi-trend up"><i class="bi bi-arrow-up-short"></i>4.2%</span></div>
+          <div class="kpi-value">318</div>
+          <div class="kpi-label">Total Students</div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#7C3AED,#06B6D4); --kpi-tint:rgba(124,58,237,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-lightning-charge-fill"></i></div><span class="kpi-trend up"><i class="bi bi-arrow-up-short"></i>2.1%</span></div>
+          <div class="kpi-value">42</div>
+          <div class="kpi-label">Total Skills Tracked</div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#10B981,#06B6D4); --kpi-tint:rgba(16,185,129,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-kanban-fill"></i></div><span class="kpi-trend up"><i class="bi bi-arrow-up-short"></i>6.7%</span></div>
+          <div class="kpi-value">27</div>
+          <div class="kpi-label">Active Projects</div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#F59E0B,#EF4444); --kpi-tint:rgba(245,158,11,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-diagram-3-fill"></i></div><span class="kpi-trend up"><i class="bi bi-arrow-up-short"></i>1.4%</span></div>
+          <div class="kpi-value">54</div>
+          <div class="kpi-label">Teams Formed</div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#EF4444,#F59E0B); --kpi-tint:rgba(239,68,68,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-hourglass-split"></i></div><span class="kpi-trend down"><i class="bi bi-arrow-down-short"></i>1.1%</span></div>
+          <div class="kpi-value">9</div>
+          <div class="kpi-label">Pending Team Formation</div>
+        </div>
+
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#0EA5E9,#7C3AED); --kpi-tint:rgba(14,165,233,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-clipboard-data"></i></div><span class="kpi-trend down"><i class="bi bi-arrow-down-short"></i>0.6%</span></div>
+          <div class="kpi-value">13</div>
+          <div class="kpi-label">Pending Skill Gap Analysis</div>
+        </div>
+      </div>
+
+      <!-- Activity + Quick actions -->
+      <div class="dash-grid">
+        <div class="panel">
+          <div class="panel-head"><h3>Recent Activities</h3><a href="#" class="link">View all</a></div>
+
+          <div class="activity-item">
+            <div class="activity-dot" style="background:var(--grad-primary);"><i class="bi bi-person-plus"></i></div>
+            <div class="activity-body"><p><b>Sanjay R.</b> completed the "Spring Boot" skill assessment</p><time>Today · 10:24 AM</time></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:linear-gradient(135deg,#10B981,#06B6D4);"><i class="bi bi-diagram-3"></i></div>
+            <div class="activity-body"><p>Team <b>Nimbus</b> was auto-formed for "Skill Gap Recommender"</p><time>Today · 9:02 AM</time></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:linear-gradient(135deg,#F59E0B,#EF4444);"><i class="bi bi-exclamation-triangle"></i></div>
+            <div class="activity-body"><p>Skill gap detected in <b>Team Aurora</b> — missing "Docker"</p><time>Yesterday · 6:47 PM</time></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:linear-gradient(135deg,#7C3AED,#2563EB);"><i class="bi bi-kanban"></i></div>
+            <div class="activity-body"><p>New project <b>"Attendance Vision"</b> was published by faculty</p><time>Yesterday · 3:10 PM</time></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:var(--grad-accent);"><i class="bi bi-mortarboard"></i></div>
+            <div class="activity-body"><p><b>42 students</b> updated their skill profiles this week</p><time>2 days ago</time></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Quick Actions</h3></div>
+          <div class="quick-actions">
+            <a href="students.html" class="qa-btn"><i class="bi bi-person-plus"></i><span>Add Student</span></a>
+            <a href="skills.html" class="qa-btn"><i class="bi bi-lightning-charge"></i><span>Add Skill</span></a>
+            <a href="projects.html" class="qa-btn"><i class="bi bi-plus-square"></i><span>New Project</span></a>
+            <a href="#" class="qa-btn"><i class="bi bi-magic"></i><span>Form Team</span></a>
+            <a href="#" class="qa-btn"><i class="bi bi-graph-up-arrow"></i><span>Run Gap Analysis</span></a>
+            <a href="#" class="qa-btn"><i class="bi bi-download"></i><span>Export Report</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project progress -->
+      <div class="panel">
+        <div class="panel-head"><h3>Project Progress</h3><a href="projects.html" class="link">Manage projects</a></div>
+
+        <div class="progress-row">
+          <div class="pr-top"><span>Smart Team Formation Engine</span><b>82%</b></div>
+          <div class="progress-track"><div class="progress-fill" data-value="82"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="pr-top"><span>Skill Gap Recommender</span><b>64%</b></div>
+          <div class="progress-track"><div class="progress-fill" data-value="64"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="pr-top"><span>Faculty Analytics Dashboard</span><b>45%</b></div>
+          <div class="progress-track"><div class="progress-fill" data-value="45"></div></div>
+        </div>
+        <div class="progress-row">
+          <div class="pr-top"><span>Attendance Vision (Computer Vision)</span><b>21%</b></div>
+          <div class="progress-track"><div class="progress-fill" data-value="21"></div></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

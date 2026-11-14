@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculty Dashboard · TeamForge</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo-mark">TF</div>
+      <div class="brand-name">TeamForge<span>Team Intelligence</span></div>
+    </div>
+    <nav class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <a href="dashboard.html" class="nav-link"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+      <a href="students.html" class="nav-link"><i class="bi bi-people"></i> Students</a>
+      <a href="skills.html" class="nav-link"><i class="bi bi-lightning-charge"></i> Skills</a>
+      <a href="projects.html" class="nav-link"><i class="bi bi-kanban"></i> Projects</a>
+      <a href="#" class="nav-link"><i class="bi bi-diagram-3"></i> Teams <span class="badge-count">6</span></a>
+
+      <div class="nav-label">Insights</div>
+      <a href="faculty.html" class="nav-link active"><i class="bi bi-easel"></i> Faculty View</a>
+      <a href="#" class="nav-link"><i class="bi bi-bar-chart"></i> Reports</a>
+
+      <div class="nav-label">Account</div>
+      <a href="profile.html" class="nav-link"><i class="bi bi-person-circle"></i> Profile</a>
+      <a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+      <a href="index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </nav>
+    <div class="user-mini">
+      <div class="av">DR</div>
+      <div class="who">Dr. R. Meenakshi<small>Faculty</small></div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburgerBtn"><i class="bi bi-list"></i></button>
+      <div class="page-heading">Faculty Dashboard <small>Reviewing progress across your assigned batches</small></div>
+      <div class="topbar-search"><i class="bi bi-search"></i><input type="text" placeholder="Search students, projects, skills..."></div>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="darkModeToggle" title="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+        <button class="icon-btn"><i class="bi bi-bell"></i><span class="dot"></span></button>
+        <div class="topbar-profile"><div class="av">DR</div><div class="who"><b>Dr. Meenakshi</b><span>Faculty</span></div></div>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <div class="kpi-grid">
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#2563EB,#06B6D4); --kpi-tint:rgba(37,99,235,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-people-fill"></i></div><span class="kpi-trend up"><i class="bi bi-arrow-up-short"></i>3.8%</span></div>
+          <div class="kpi-value">96</div>
+          <div class="kpi-label">Students Registered</div>
+        </div>
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#7C3AED,#06B6D4); --kpi-tint:rgba(124,58,237,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-kanban-fill"></i></div><span class="kpi-trend up"><i class="bi bi-arrow-up-short"></i>5.2%</span></div>
+          <div class="kpi-value">14</div>
+          <div class="kpi-label">Projects Supervised</div>
+        </div>
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#10B981,#06B6D4); --kpi-tint:rgba(16,185,129,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-file-earmark-bar-graph"></i></div><span class="kpi-trend up"><i class="bi bi-arrow-up-short"></i>1.9%</span></div>
+          <div class="kpi-value">22</div>
+          <div class="kpi-label">Reports Generated</div>
+        </div>
+        <div class="kpi-card" style="--kpi-grad:linear-gradient(135deg,#F59E0B,#EF4444); --kpi-tint:rgba(245,158,11,.08);">
+          <div class="kpi-top"><div class="kpi-icon"><i class="bi bi-clock-history"></i></div><span class="kpi-trend down"><i class="bi bi-arrow-down-short"></i>0.4%</span></div>
+          <div class="kpi-value">5</div>
+          <div class="kpi-label">Reviews Pending</div>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="panel">
+          <div class="panel-head"><h3>Recent Activities</h3><a href="#" class="link">View all</a></div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:var(--grad-primary);"><i class="bi bi-clipboard-check"></i></div>
+            <div class="activity-body"><p>Reviewed <b>Team Nimbus</b>'s Review 2 submission</p><time>Today · 11:15 AM</time></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:linear-gradient(135deg,#10B981,#06B6D4);"><i class="bi bi-check2-circle"></i></div>
+            <div class="activity-body"><p>Approved project proposal <b>"Attendance Vision"</b></p><time>Today · 9:40 AM</time></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:linear-gradient(135deg,#F59E0B,#EF4444);"><i class="bi bi-exclamation-triangle"></i></div>
+            <div class="activity-body"><p>Flagged skill gap in <b>Team Aurora</b> for follow-up</p><time>Yesterday · 4:20 PM</time></div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-dot" style="background:var(--grad-accent);"><i class="bi bi-file-earmark-text"></i></div>
+            <div class="activity-body"><p>Generated the mid-semester progress report</p><time>2 days ago</time></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-head"><h3>Batch Overview</h3></div>
+          <div class="progress-row">
+            <div class="pr-top"><span>CSE — Section A</span><b>91%</b></div>
+            <div class="progress-track"><div class="progress-fill" data-value="91"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="pr-top"><span>IT — Section B</span><b>74%</b></div>
+            <div class="progress-track"><div class="progress-fill" data-value="74"></div></div>
+          </div>
+          <div class="progress-row">
+            <div class="pr-top"><span>AI &amp; DS — Section A</span><b>58%</b></div>
+            <div class="progress-track"><div class="progress-fill" data-value="58"></div></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

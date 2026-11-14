@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in · TeamForge</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-wrap">
+
+  <!-- Visual / brand side -->
+  <section class="auth-visual">
+    <div class="auth-brand">
+      <div class="logo-mark">TF</div>
+      <div class="brand-name">TeamForge <span>· Intelligent Team Ops</span></div>
+    </div>
+
+    <div class="auth-copy">
+      <h1>Build teams the way great products get built — by skill, not by seat.</h1>
+      <p>TeamForge reads every student's skill profile, balances project teams automatically, and flags gaps before they become deadlines.</p>
+    </div>
+
+    <div class="auth-cluster">
+      <div class="stack-avatars">
+        <div class="av">KN</div>
+        <div class="av">TK</div>
+        <div class="av">SR</div>
+        <div class="av">+9</div>
+      </div>
+      <small>318 students already mapped this semester</small>
+    </div>
+  </section>
+
+  <!-- Form side -->
+  <section class="auth-form-side">
+    <div class="auth-card">
+      <h2>Welcome back</h2>
+      <p class="sub">Sign in to your workspace to continue.</p>
+
+      <div class="role-tabs">
+        <button type="button" class="active" data-role="admin">Admin</button>
+        <button type="button" data-role="faculty">Faculty</button>
+        <button type="button" data-role="student">Student</button>
+      </div>
+
+      <form id="loginForm">
+        <div class="field">
+          <label for="loginId">Email or ID</label>
+          <div class="input-wrap">
+            <i class="bi bi-envelope"></i>
+            <input id="loginId" type="text" placeholder="you@college.edu" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="loginPass">Password</label>
+          <div class="input-wrap">
+            <i class="bi bi-lock"></i>
+            <input id="loginPass" type="password" placeholder="••••••••" required>
+          </div>
+        </div>
+
+        <div class="row-between">
+          <label class="remember"><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary">Sign in</button>
+      </form>
+
+      <p class="auth-foot">Protected workspace &middot; access is provisioned by your institution</p>
+    </div>
+  </section>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

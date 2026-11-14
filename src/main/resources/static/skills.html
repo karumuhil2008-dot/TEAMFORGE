@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills · TeamForge</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app-shell">
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="logo-mark">TF</div>
+      <div class="brand-name">TeamForge<span>Team Intelligence</span></div>
+    </div>
+    <nav class="nav-group">
+      <div class="nav-label">Workspace</div>
+      <a href="dashboard.html" class="nav-link"><i class="bi bi-grid-1x2"></i> Dashboard</a>
+      <a href="students.html" class="nav-link"><i class="bi bi-people"></i> Students</a>
+      <a href="skills.html" class="nav-link active"><i class="bi bi-lightning-charge"></i> Skills</a>
+      <a href="projects.html" class="nav-link"><i class="bi bi-kanban"></i> Projects</a>
+      <a href="#" class="nav-link"><i class="bi bi-diagram-3"></i> Teams <span class="badge-count">6</span></a>
+
+      <div class="nav-label">Insights</div>
+      <a href="faculty.html" class="nav-link"><i class="bi bi-easel"></i> Faculty View</a>
+      <a href="#" class="nav-link"><i class="bi bi-bar-chart"></i> Reports</a>
+
+      <div class="nav-label">Account</div>
+      <a href="profile.html" class="nav-link"><i class="bi bi-person-circle"></i> Profile</a>
+      <a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+      <a href="index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a>
+    </nav>
+    <div class="user-mini">
+      <div class="av">KN</div>
+      <div class="who">Karumuhilarasu K.N.<small>Admin</small></div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <button class="hamburger" id="hamburgerBtn"><i class="bi bi-list"></i></button>
+      <div class="page-heading">Skills <small>42 skills tracked across every department</small></div>
+      <div class="topbar-search"><i class="bi bi-search"></i><input type="text" placeholder="Search students, projects, skills..."></div>
+      <div class="topbar-actions">
+        <button class="icon-btn" id="darkModeToggle" title="Toggle dark mode"><i class="bi bi-moon-stars"></i></button>
+        <button class="icon-btn"><i class="bi bi-bell"></i><span class="dot"></span></button>
+        <div class="topbar-profile"><div class="av">KN</div><div class="who"><b>Karumuhilarasu</b><span>Admin</span></div></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="table-toolbar">
+        <div class="search-box"><i class="bi bi-search"></i><input type="text" id="skillSearch" placeholder="Search skills..."></div>
+        <button class="btn-ghost"><i class="bi bi-funnel"></i> Filter by category</button>
+        <button class="btn-accent" data-modal-open="addSkillModal"><i class="bi bi-plus-lg"></i> Add Skill</button>
+      </div>
+
+      <div class="skill-grid" id="skillGrid">
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark">Ja</div>
+            <div><h4>Java</h4><span class="cat">Programming Language</span></div>
+          </div>
+          <div class="skill-meta"><span>142 students</span><span>Demand: High</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="88"></div></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark" style="background:linear-gradient(135deg,#F59E0B,#EF4444);">Py</div>
+            <div><h4>Python</h4><span class="cat">Programming Language</span></div>
+          </div>
+          <div class="skill-meta"><span>168 students</span><span>Demand: High</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="92"></div></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark" style="background:linear-gradient(135deg,#10B981,#06B6D4);">SB</div>
+            <div><h4>Spring Boot</h4><span class="cat">Backend Framework</span></div>
+          </div>
+          <div class="skill-meta"><span>76 students</span><span>Demand: High</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="61"></div></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark" style="background:linear-gradient(135deg,#0EA5E9,#7C3AED);">Re</div>
+            <div><h4>React</h4><span class="cat">Frontend Framework</span></div>
+          </div>
+          <div class="skill-meta"><span>94 students</span><span>Demand: Medium</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="70"></div></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark" style="background:linear-gradient(135deg,#7C3AED,#2563EB);">My</div>
+            <div><h4>MySQL</h4><span class="cat">Database</span></div>
+          </div>
+          <div class="skill-meta"><span>201 students</span><span>Demand: High</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="95"></div></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark" style="background:linear-gradient(135deg,#EF4444,#F59E0B);">Do</div>
+            <div><h4>Docker</h4><span class="cat">DevOps</span></div>
+          </div>
+          <div class="skill-meta"><span>38 students</span><span>Demand: Rising</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="29"></div></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark" style="background:linear-gradient(135deg,#10B981,#2563EB);">Tf</div>
+            <div><h4>TensorFlow</h4><span class="cat">Machine Learning</span></div>
+          </div>
+          <div class="skill-meta"><span>52 students</span><span>Demand: Rising</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="41"></div></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-card-top">
+            <div class="skill-mark" style="background:linear-gradient(135deg,#2563EB,#7C3AED);">Js</div>
+            <div><h4>JavaScript</h4><span class="cat">Programming Language</span></div>
+          </div>
+          <div class="skill-meta"><span>176 students</span><span>Demand: High</span></div>
+          <div class="skill-bar"><div class="progress-track"><div class="progress-fill" data-value="87"></div></div></div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- Add Skill Modal -->
+<div class="modal-overlay" id="addSkillModal">
+  <div class="modal-box">
+    <div class="modal-head"><h3>Add Skill</h3><button class="modal-close" data-modal-close><i class="bi bi-x-lg"></i></button></div>
+    <form onsubmit="event.preventDefault(); alert('Wire this to POST /api/skills');">
+      <div class="field"><label>Skill Name</label><div class="input-wrap"><i class="bi bi-lightning-charge"></i><input type="text" placeholder="e.g. Kubernetes" required></div></div>
+      <div class="field"><label>Category</label><div class="input-wrap"><i class="bi bi-tags"></i><input type="text" placeholder="DevOps, Database, Language..." required></div></div>
+      <div class="modal-actions">
+        <button type="button" class="btn-ghost" data-modal-close>Cancel</button>
+        <button type="submit" class="btn-accent"><i class="bi bi-check2"></i> Save Skill</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
